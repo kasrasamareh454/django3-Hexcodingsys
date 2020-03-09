@@ -1,0 +1,58 @@
+
+{% extends 'ourprojects/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<head>
+
+<link rel="stylesheet" href="{% static 'ourprojects/foreffects.css' %}" type="text/css">
+
+</head>
+<style>
+  .forpadding {
+    padding-left: 39%;
+  }
+</style>
+<h2 class="forpadding">{{ projects.count }} project{{ projects.count|pluralize }} is done🙃</h2>
+
+<body style="background-color: lightslategray;">
+
+{% for project in projects %}
+
+<br><br>
+
+<div class="row">
+  
+  <div class="column">
+
+    <div class="container">
+        <img src="{{project.image.url}}" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><h1><div class="btn btn-outline-secondary"><font color='lightskyblue'><a href="{{ project.url }}" target="_blank" style="color: lightskyblue;">{{ project.title }}</h1></div></a><!--<img src="{{ project.image.url }}" height="400" width="400">--><h5>Released in {{ project.date|date:'F jS Y' }}</h5><p>{{ project.description|striptags|truncatechars:100 }}</p></div></font>
+        </div>
+      </div>
+  </div>
+
+</div>
+  
+
+
+
+
+
+<!--<img src="{{ project.image.url }}" height="400" width="400">
+    
+<a href="{% url 'ourprojects:detail' project.id %}"><h1>{{ project.title }}</h1></a>
+    
+<h5>{{ project.date|date:'M d Y' |upper }}</h5>
+    
+<p>{{ project.description|striptags|truncatechars:100 }}</p>-->
+
+{% endfor %}
+
+
+{% endblock %}
+
+</body>

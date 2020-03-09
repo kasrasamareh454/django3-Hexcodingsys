@@ -1,0 +1,43 @@
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.soppp {
+  position: relative;
+  width: 23%;
+  max-width: 500px;
+  left: 18%;
+  bottom: 0%;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  left: 18%;
+  bottom: 0%;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.oveee {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.soppp:hover .oveee {
+  opacity: 1;
+}
+
+
+/*-----------------------------------------------------------------------------*/
