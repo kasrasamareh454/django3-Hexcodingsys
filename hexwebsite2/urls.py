@@ -23,6 +23,8 @@ from django.conf import settings
 
 from homepage import views
 
+app_name = 'hexmain'
+
 urlpatterns = [
 
     path('admin/', admin.site.urls),
@@ -31,7 +33,9 @@ urlpatterns = [
 
     path('about/' , views.AboutUs , name='about'),
 
-    path('ourprojects/', include('ourprojects.urls'))
+    path('ourprojects/', include('ourprojects.urls')),
+
+    path('authn/', include('authn.urls')),
 
 ]
 

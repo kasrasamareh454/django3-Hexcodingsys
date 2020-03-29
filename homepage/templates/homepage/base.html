@@ -18,6 +18,8 @@
     <span>Hex Group</span>
   </a>
   <!--<a class="navbar-brand" href="{%url 'home' %}">Hex Group</a>-->
+  
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,7 +36,7 @@
         }
       </style>      
       <li class="nav-item">
-        <a role="button" href="#" class="btn" style="color: slategray;"><p class="bottom-three">Sign in</p></a>
+        <a role="button" href="{% url 'authn:loginuser' %}" class="btn" style="color: slategray;"><p class="bottom-three">Sign in</p></a>
       </li>
 
 
